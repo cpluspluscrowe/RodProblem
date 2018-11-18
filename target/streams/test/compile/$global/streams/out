@@ -1,9 +1,16 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:63:50: not enough arguments for method cutRod: (passedPieces: List[Long], cutLengths: List[Long], pieceToRemove: Long, hashToPrice: Map[String,Long])Map[String,Long].[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter hashToPrice.[0m
-[0m[[0m[31merror[0m] [0m[0m    val prices: Map[String, Long] = Pieces.cutRod(List(1), List(1), Map())[0m
-[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:67:50: not enough arguments for method cutRod: (passedPieces: List[Long], cutLengths: List[Long], pieceToRemove: Long, hashToPrice: Map[String,Long])Map[String,Long].[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter hashToPrice.[0m
-[0m[[0m[31merror[0m] [0m[0m    val prices: Map[String, Long] = Pieces.cutRod(List(2), List(1), Map())[0m
-[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:26:7: not found: value Pieces[0m
+[0m[[0m[31merror[0m] [0m[0m      Pieces.cutPiece(5, 6) == List(5)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:32:7: not found: value Pieces[0m
+[0m[[0m[31merror[0m] [0m[0m      Pieces.cutPiece(6, 6)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:36:12: not found: value Pieces[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Pieces.cutPiece(7, 6) == List(1, 6))[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:40:12: not found: value Pieces[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Pieces.getPiecesHash(List(1, 2, 3)) === "1-2-3")[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:60:7: not found: value Pieces[0m
+[0m[[0m[31merror[0m] [0m[0m      Pieces.addToMap(map, "three" -> 4L).equals(Map("one" -> 2, "three" -> 4)))[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

@@ -23,21 +23,21 @@ class StackSpec extends FlatSpec {
 
   "cut pieces" should "work" in {
     try {
-      Pieces.cutPiece(5, 6) == List(5)
+      new Pieces().cutPiece(5, 6) == List(5)
     } catch {
       case e: Exception => e.getMessage shouldEqual "5 was not greater than 6"
     }
 
     try {
-      Pieces.cutPiece(6, 6)
+      new Pieces().cutPiece(6, 6)
     } catch {
       case e: Exception => e.getMessage shouldEqual "6 was not greater than 6"
     }
-    assert(Pieces.cutPiece(7, 6) == List(1, 6))
+    assert(new Pieces().cutPiece(7, 6) == List(1, 6))
   }
 
   "hash list" should "work" in {
-    assert(Pieces.getPiecesHash(List(1, 2, 3)) === "1-2-3")
+    assert(new Pieces().getPiecesHash(List(1, 2, 3)) === "1-2-3")
   }
 
   "cutting into pieces" should "be simple" in {
@@ -57,39 +57,41 @@ class StackSpec extends FlatSpec {
   "addToMap" should "append values to the map" in {
     val map = Map("one" -> 2L)
     assert(
-      Pieces.addToMap(map, "three" -> 4L).equals(Map("one" -> 2, "three" -> 4)))
+      new Pieces()
+        .addToMap(map, "three" -> 4L)
+        .equals(Map("one" -> 2, "three" -> 4)))
   }
   "calculate price" should "work with an empty map" in {
-    val prices: Map[String, Long] = Pieces.cutRod(List(1), List(1), 0L, Map())
-    assert(prices.equals(Map()))
+    val pieces: Pieces = new Pieces()
+    pieces.cutRod(List(1), List(1), 0L)
+    assert(pieces.equals(Map()))
   }
   "calculate price" should "return cut length and prices" in {
-    val prices: Map[String, Long] = Pieces.cutRod(List(2), List(1), 0L, Map())
-    assert(prices === Map("1" -> 2L))
+    val pieces = new Pieces()
+    pieces.cutRod(List(2), List(1), 0L)
+    assert(pieces.hashToPrice == Map("1" -> 2L))
   }
 }
 
-object Pieces {
+class Pieces() {
+  val hashToPrice: Map[String, Long] = Map()
   def cutRod(passedPieces: List[Long],
              cutLengths: List[Long],
-             pieceToRemove: Long,
-             hashToPrice: Map[String, Long]): Map[String, Long] = {
+             pieceToRemove: Long): Unit = {
     val pieces = passedPieces diff List(pieceToRemove)
     if (hashToPrice.contains(getPiecesHash(pieces))) {
-      return hashToPrice
+      return
     }
     for (pieceLength <- pieces) {
       for (cutSize <- cutLengths) {
         if (pieceLength > cutSize) {
+          addToMap(hashToPrice, getPiecesHash(pieces: List[Long]) -> 1)
           cutRod(pieces ::: cutPiece(pieceLength, cutSize),
                  cutLengths,
-                 pieceLength,
-                 addToMap(hashToPrice,
-                          Pieces.getPiecesHash(pieces: List[Long]) -> 1))
+                 pieceLength)
         }
       }
     }
-    return hashToPrice
   }
   def calculatePrice(summedPrice: Long,
                      piecesIndex: Int,
