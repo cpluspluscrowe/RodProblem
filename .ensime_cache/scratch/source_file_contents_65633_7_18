@@ -1,0 +1,9 @@
+object problem {
+  val a = 5
+  def main(args: Array[String]) {
+    {val t = 5}{
+      println("yes")
+    }
+    tr
+  }
+}
