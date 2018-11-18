@@ -1,0 +1,13 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mStackSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msimple assert[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should work[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mshould concat lists correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mmap concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be correct[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcut pieces[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should work[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mhash list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should work[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcutting into pieces[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be simple[0m[0m
