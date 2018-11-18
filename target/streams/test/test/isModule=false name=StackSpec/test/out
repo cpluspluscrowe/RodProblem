@@ -19,3 +19,8 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- should set correct hashes[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32maddToMap[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should append values to the map[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcalculate price[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should work with an empty map[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcalculate price[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should return cut length and prices *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Map() did not equal Map("1" -> 2) (tests.scala:68)[0m[0m

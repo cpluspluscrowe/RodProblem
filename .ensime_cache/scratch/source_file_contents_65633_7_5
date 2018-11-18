@@ -59,12 +59,23 @@ class StackSpec extends FlatSpec {
     assert(
       Pieces.addToMap(map, "three" -> 4L).equals(Map("one" -> 2, "three" -> 4)))
   }
+  "calculate price" should "work with an empty map" in {
+    val prices: Map[String, Long] = Pieces.cutRod(List(1), List(1),0L, Map())
+    assert(prices.equals(Map()))
+  }
+  "calculate price" should "return cut length and prices" in {
+    val prices: Map[String, Long] = Pieces.cutRod(List(2), List(1),0L, Map())
+
+    assert(prices.equals(Map("1" -> 1L)))
+  }
 }
 
 object Pieces {
-  def cutRod(pieces: List[Long],
+  def cutRod(passedPieces: List[Long],
              cutLengths: List[Long],
+             pieceToRemove: Long,
              hashToPrice: Map[String, Long]): Map[String, Long] = {
+    val pieces = passedPieces diff List(pieceToRemove)
     if (hashToPrice.contains(getPiecesHash(pieces))) {
       return hashToPrice
     }
@@ -73,11 +84,29 @@ object Pieces {
         if (pieceLength > cutSize) {
           cutRod(pieces ::: cutPiece(pieceLength, cutSize),
                  cutLengths,
-                 addToMap(hashToPrice, Pieces.getMessage(pieces) -> )
+                 pieceLength,
+                 addToMap(hashToPrice,
+                          Pieces.getPiecesHash(pieces: List[Long]) -> 1))
         }
       }
     }
     return hashToPrice
+  }
+  def calculatePrice(summedPrice: Long,
+                     piecesIndex: Int,
+                     pieces: List[Long],
+                     lengthToPrice: Map[Long, Long]): Long = {
+    if (piecesIndex == pieces.size) {
+      return summedPrice
+    }
+    if (lengthToPrice.contains(pieces(piecesIndex))) {
+      return calculatePrice(summedPrice + lengthToPrice(pieces(piecesIndex)),
+                            piecesIndex + 1,
+                            pieces,
+                            lengthToPrice)
+    } else {
+      return calculatePrice(summedPrice, piecesIndex + 1, pieces, lengthToPrice)
+    }
   }
   def addToMap(map: Map[String, Long],
                hashToAdd: (String, Long)): Map[String, Long] = {

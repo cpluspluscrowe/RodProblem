@@ -1,19 +1,64 @@
 [0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:2:12: object scalatest is not a member of package org[0m
 [0m[[0m[31merror[0m] [0m[0mimport org.scalatest._[0m
 [0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:4:25: not found: type FlatSpec[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:3:8: not found: object Matchers[0m
+[0m[[0m[31merror[0m] [0m[0mimport Matchers._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:5:25: not found: type FlatSpec[0m
 [0m[[0m[31merror[0m] [0m[0mclass StackSpec extends FlatSpec {[0m
 [0m[[0m[31merror[0m] [0m[0m                        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:6:13: value should is not a member of String[0m
-[0m[[0m[31merror[0m] [0m[0m  "A Stack" should "pop values in last-in-first-out order" in {[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:7:17: value === is not a member of Int[0m
-[0m[[0m[31merror[0m] [0m[0m       assert(1 === 1)[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:6:19: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "simple assert" should "work" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:7:14: value === is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(1 === 1)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:10:35: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "should concat lists correctly" should "be right" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:17:16: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "map concat" should "be correct" in {[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:21:17: value === is not a member of Map[Int,Int][0m
+[0m[[0m[31merror[0m] [0m[0m    assert(map1 === Map(1 -> 2, 3 -> 4))[0m
 [0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:10:3: not found: value it[0m
-[0m[[0m[31merror[0m] [0m[0m  it should "throw NoSuchElementException if an empty stack is popped" in {[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:12:5: not found: value assertThrows[0m
-[0m[[0m[31merror[0m] [0m[0m    assertThrows[NoSuchElementException] {[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:24:16: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "cut pieces" should "work" in {[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:28:41: value shouldEqual is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m      case e: Exception => e.getMessage shouldEqual "5 was not greater than 6"[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:34:41: value shouldEqual is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m      case e: Exception => e.getMessage shouldEqual "6 was not greater than 6"[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:39:15: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "hash list" should "work" in {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:40:48: value === is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(Pieces.getPiecesHash(List(1, 2, 3)) === "1-2-3")[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:43:25: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "cutting into pieces" should "be simple" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:46:9: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "map" should "return correct value" in {[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:48:19: value === is not a member of Long[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(map(1) === 2)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:50:11: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "value" should "be contained in map" in {[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:52:28: value === is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    assert(map.contains(1) === true)[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:54:12: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "cutRod" should "set correct hashes" in {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:57:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "addToMap" should "append values to the map" in {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:62:21: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "calculate price" should "be based on pieces and prices" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m21 errors found[0m

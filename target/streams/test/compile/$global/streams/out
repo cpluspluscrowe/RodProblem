@@ -1,11 +1,9 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:59:28: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : scala.collection.immutable.Map[Int,Int][0m
-[0m[[0m[31merror[0m] [0m[0m required: Map[String,Long][0m
-[0m[[0m[31merror[0m] [0m[0m    assert(Pieces.addToMap(map, 3 -> 4) === Map(1 -> 2, 3 -> 4))[0m
-[0m[[0m[31merror[0m] [0m[0m                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:59:35: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : (Int, Int)[0m
-[0m[[0m[31merror[0m] [0m[0m required: (String, Long)[0m
-[0m[[0m[31merror[0m] [0m[0m    assert(Pieces.addToMap(map, 3 -> 4) === Map(1 -> 2, 3 -> 4))[0m
-[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:63:50: not enough arguments for method cutRod: (passedPieces: List[Long], cutLengths: List[Long], pieceToRemove: Long, hashToPrice: Map[String,Long])Map[String,Long].[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter hashToPrice.[0m
+[0m[[0m[31merror[0m] [0m[0m    val prices: Map[String, Long] = Pieces.cutRod(List(1), List(1), Map())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/ccrowe/Documents/gitrepos/dynamicScala/src/test/scala/tests.scala:67:50: not enough arguments for method cutRod: (passedPieces: List[Long], cutLengths: List[Long], pieceToRemove: Long, hashToPrice: Map[String,Long])Map[String,Long].[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter hashToPrice.[0m
+[0m[[0m[31merror[0m] [0m[0m    val prices: Map[String, Long] = Pieces.cutRod(List(2), List(1), Map())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
