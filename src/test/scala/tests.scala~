@@ -1,0 +1,7 @@
+import org.scalatest.FunSuite
+
+class Tests extends FunSuite {
+  test("simple test") {
+    assert(1 == 1)
+  }
+}

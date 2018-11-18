@@ -1,0 +1,19 @@
+compile
+compile
+sbt ensimeConfig
+ensimeConfig
+compile
+ensimeConfig
+compile
+ensimeConfig
+test
+compiel
+compile
+ensimeConfig
+test
+compile
+test
+compile
+run
+test
+exit
