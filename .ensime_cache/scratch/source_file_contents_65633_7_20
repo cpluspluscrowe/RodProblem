@@ -43,19 +43,47 @@ class StackSpec extends FlatSpec {
   "cutting into pieces" should "be simple" in {
     assert(true)
   }
+  "map" should "return correct value" in {
+    val map: Map[Long, Long] = Map(1L -> 2L)
+    assert(map(1) === 2)
+  }
+  "value" should "be contained in map" in {
+    val map: Map[Long, Long] = Map(1L -> 2L)
+    assert(map.contains(1) === true)
+  }
+  "cutRod" should "set correct hashes" in {
+    assert(true)
+  }
+  "addToMap" should "append values to the map" in {
+    val map = Map("one" -> 2L)
+    assert(
+      Pieces.addToMap(map, "three" -> 4L).equals(Map("one" -> 2, "three" -> 4)))
+  }
 }
 
 object Pieces {
-  def cutRod(pieces: List[Long], cutLengths: List[Long]): List[Long] = {
+  def cutRod(pieces: List[Long],
+             cutLengths: List[Long],
+             hashToPrice: Map[String, Long]): Map[String, Long] = {
+    if (hashToPrice.contains(getPiecesHash(pieces))) {
+      return hashToPrice
+    }
     for (pieceLength <- pieces) {
-      for(cutSize <- cutLengths) {
-        if(pieceLength > cutSize){
-          cutRod(pieces ::: cutPiece(pieceLength,cutSize), cutLengths)
+      for (cutSize <- cutLengths) {
+        if (pieceLength > cutSize) {
+          cutRod(pieces ::: cutPiece(pieceLength, cutSize),
+                 cutLengths,
+                 addToMap(hashToPrice, Pieces.getPiecesHash(pieces: List[Long]
         }
       }
     }
-    return
+    return hashToPrice
   }
+  def addToMap(map: Map[String, Long],
+               hashToAdd: (String, Long)): Map[String, Long] = {
+    map + hashToAdd
+  }
+
   def cutPiece(pieceLength: Long, cutSize: Long): List[Long] = {
     assert(pieceLength > cutSize)
     val piece1Length = pieceLength - cutSize

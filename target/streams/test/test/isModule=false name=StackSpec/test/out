@@ -11,3 +11,11 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- should work[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mcutting into pieces[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be simple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mmap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return correct value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mvalue[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be contained in map[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcutRod[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should set correct hashes[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32maddToMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should append values to the map[0m[0m
