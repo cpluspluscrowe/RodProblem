@@ -1,0 +1,15 @@
+import org.scalatest._
+
+class ProblemTests extends FlatSpec {
+
+  "A Stack" should "pop values in last-in-first-out order" in {
+    as
+  }
+
+  it should "throw NoSuchElementException if an empty stack is popped" in {
+    val emptyStack = new Stack[String]
+    assertThrows[NoSuchElementException] {
+      emptyStack.pop()
+    }
+  }
+}

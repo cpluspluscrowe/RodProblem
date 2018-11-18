@@ -20,9 +20,9 @@
    :depends-on-modules nil
    :compile-deps ("/Users/ccrowe/.sbt/boot/scala-2.12.6/lib/scala-library.jar")
    :runtime-deps nil
-   :test-deps nil
-   :doc-jars ("/Users/ccrowe/Documents/gitrepos/dynamicScala/target/scala-2.12/dynamicscala_2.12-0.1.0-SNAPSHOT-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.12.6-javadoc.jar")
-   :reference-source-roots ("/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.6-sources.jar")))
+   :test-deps ("/Users/ccrowe/.sbt/boot/scala-2.12.6/lib/scala-reflect.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar" "/Users/ccrowe/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.5.jar" "/Users/ccrowe/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.5.jar")
+   :doc-jars ("/Users/ccrowe/Documents/gitrepos/dynamicScala/target/scala-2.12/dynamicscala_2.12-0.1.0-SNAPSHOT-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.12.6-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-reflect/docs/scala-reflect-2.12.6-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/docs/scala-xml_2.12-1.0.6-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scalactic/scalactic_2.12/docs/scalactic_2.12-3.0.5-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scalatest/scalatest_2.12/docs/scalatest_2.12-3.0.5-javadoc.jar")
+   :reference-source-roots ("/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.6-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.12.6-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.0.6-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.5-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.5-sources.jar")))
  :projects ((
     :id (:project "dynamicscala" :config "compile")
     :depends nil
@@ -39,7 +39,7 @@
     :targets ("/Users/ccrowe/Documents/gitrepos/dynamicScala/target/scala-2.12/test-classes")
     :scalac-options ("-Ymacro-expand:discard")
     :javac-options nil
-    :library-jars nil
-    :library-sources nil
-    :library-docs nil))
+    :library-jars ("/Users/ccrowe/.sbt/boot/scala-2.12.6/lib/scala-reflect.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar" "/Users/ccrowe/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.5.jar" "/Users/ccrowe/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.5.jar")
+    :library-sources ("/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.12.6-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.0.6-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.5-sources.jar" "/Users/ccrowe/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.5-sources.jar")
+    :library-docs ("/Users/ccrowe/.ivy2/cache/org.scala-lang/scala-reflect/docs/scala-reflect-2.12.6-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/docs/scala-xml_2.12-1.0.6-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scalactic/scalactic_2.12/docs/scalactic_2.12-3.0.5-javadoc.jar" "/Users/ccrowe/.ivy2/cache/org.scalatest/scalatest_2.12/docs/scalatest_2.12-3.0.5-javadoc.jar")))
 )
